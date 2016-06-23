@@ -13,3 +13,5 @@
   - gender = m oder f
   - age = 18 bis 99
   - Abruf aller Daten für Männer oder Frauen für bestimmtes Alter
+- api/v1/ausdauer/uebungen
+  - Abruf aller Ausdauer Uebungen

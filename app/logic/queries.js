@@ -51,9 +51,26 @@ module.exports = (db, tableName) => {
       });
   }
 
+  function getUebungen(req, res, next) {
+    db.any(`select distinct uebung from ${tableName}`)
+      .then((data) => {
+        res.status(200)
+          .json({
+            status: "success",
+            message: "all data receivced!",
+            methodCall: "getUebungen",
+            data: data
+          });
+      })
+      .catch((err) => {
+        return next(err);
+      });
+  }
+
   return {
     getAll: getAll,
     getAllFromGender: getAllFromGender,
-    getAllFromGenderAndAge: getAllFromGenderAndAge
+    getAllFromGenderAndAge: getAllFromGenderAndAge,
+    getUebungen: getUebungen
   }
 }
