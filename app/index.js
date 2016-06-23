@@ -1,17 +1,22 @@
+// imports
 const http = require("http");
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const devEnv = require("../dev-env");
 
+// setup database
 const pqp = require("pg-promise")();
-const connectionString = "postgress://localhost:5432/sportabzeichen";
+const connectionString = process.env.CONNECTIONSTRING || devEnv.CONNECTIONSTRING;
 const db = pqp(connectionString);
 
+// init routes
 const base = require("./api/v1/base/index")(express);
 const ausdauer = require("./api/v1/ausdauer/index")(express, db);
 
+// setup app
 const app = express();
-const port = process.env.PORT || 5005;
+const port = process.env.PORT || devEnv.PORT;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -19,9 +24,11 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+// setup routes
 app.use("/api/v1", base);
-app.use("/api/v1/sportabzeichen/ausdauer", ausdauer);
+app.use("/api/v1/ausdauer", ausdauer);
 
+// start server
 const server = http.createServer(app).listen(port, () => {
   console.log("Backend is running on port: " + port);
 });
