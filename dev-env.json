@@ -1,0 +1,4 @@
+{
+  "CONNECTIONSTRING": "postgress://localhost:5432/sportabzeichen",
+  "PORT": 5005
+}
