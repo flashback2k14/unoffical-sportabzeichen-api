@@ -2,7 +2,7 @@ module.exports = (express, db) => {
   // get routes from express
   const ausdauer = express.Router();
   // get sql connection
-  const tblAusdauer = require("../../../logic/queries")(db, "ausdauer");
+  const tblAusdauer = require("../../../logic/queries")(db, "Ausdauer");
   // routes
   ausdauer.get("/", tblAusdauer.getAll);
   ausdauer.get("/uebungen", tblAusdauer.getUebungen);

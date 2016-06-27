@@ -7,7 +7,7 @@ const devEnv = require("../dev-env");
 
 // setup database
 const pqp = require("pg-promise")();
-const connectionString = process.env.CONNECTIONSTRING || devEnv.CONNECTIONSTRING;
+const connectionString = process.env.DATABASE_URL || devEnv.DATABASE_URL;
 const db = pqp(connectionString);
 
 // init routes
