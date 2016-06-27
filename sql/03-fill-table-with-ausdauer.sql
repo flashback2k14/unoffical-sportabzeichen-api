@@ -1,5 +1,11 @@
+/**
+ * Connect to Database
+ */
 \c sportabzeichen;
 
+/**
+ * Maenner
+ */
 INSERT INTO leistungstabelle (geschlecht, jahr, kategorie, uebung, zusatz, alt_von, alt_bis, abzeichen_bronze, abzeichen_silber, abzeichen_gold, einheit) VALUES 
   ('m', 2016, 'Ausdauer', 'Lauf', '3.000 m', 18, 19, '17:20', '15:20', '13:20', 'min'),
   ('m', 2016, 'Ausdauer', 'Lauf', '3.000 m', 20, 24, '16:50', '14:50', '12:50', 'min'),
@@ -90,7 +96,9 @@ INSERT INTO leistungstabelle (geschlecht, jahr, kategorie, uebung, zusatz, alt_v
   ('m', 2016, 'Ausdauer', 'Radfahren', '20.000 m', 85, 89, '77:30', '66:30', '55:30', 'min'),
   ('m', 2016, 'Ausdauer', 'Radfahren', '20.000 m', 90, 99, '79:00', '68:00', '58:00', 'min');
 
-
+/**
+ * Frauen
+ */
 INSERT INTO leistungstabelle (geschlecht, jahr, kategorie, uebung, zusatz, alt_von, alt_bis, abzeichen_bronze, abzeichen_silber, abzeichen_gold, einheit) VALUES 
   ('f', 2016, 'Ausdauer', 'Lauf', '3.000 m', 18, 19, '22:00', '20:00', '18:00', 'min'),
   ('f', 2016, 'Ausdauer', 'Lauf', '3.000 m', 20, 24, '21:50', '19:50', '17:50', 'min'),
