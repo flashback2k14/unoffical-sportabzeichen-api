@@ -17,6 +17,10 @@
     "url": "https://github.com/flashback2k14/unofficial-sportabzeichen-api/issues"
   },
   "homepage": "https://github.com/flashback2k14/unofficial-sportabzeichen-api#readme",
+  "engines": {
+    "node": "6.1.0",
+    "npm": "3.8.6"
+  }, 
   "dependencies": {
     "express": "^4.14.0",
     "body-parser": "^1.15.2",
