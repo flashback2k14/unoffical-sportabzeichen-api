@@ -1,7 +1,7 @@
 {
-  "name": "unoffical-sportabzeichen-api",
+  "name": "unofficial-sportabzeichen-api",
   "version": "0.1.0",
-  "description": "unoffical sportabzeichen api",
+  "description": "unofficial sportabzeichen api",
   "main": "app/index.js",
   "author": "flashback2k14",
   "license": "MIT",
@@ -9,6 +9,18 @@
     "start": "node app/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flashback2k14/unofficial-sportabzeichen-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flashback2k14/unofficial-sportabzeichen-api/issues"
+  },
+  "homepage": "https://github.com/flashback2k14/unofficial-sportabzeichen-api#readme",
+  "engines": {
+    "node": "6.1.0",
+    "npm": "3.8.6"
+  }, 
   "dependencies": {
     "express": "^4.14.0",
     "body-parser": "^1.15.2",

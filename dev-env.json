@@ -1,4 +1,5 @@
 {
+  "USE_SSL": false,
   "DATABASE_URL": "postgress://localhost:5432/sportabzeichen",
   "PORT": 5005
 }

@@ -6,9 +6,16 @@ const cors = require("cors");
 const devEnv = require("../dev-env");
 
 // setup database
-const pqp = require("pg-promise")();
+const pgp = require("pg-promise")();
+// setup ssl
+const useSSL = process.env.USE_SSL || devEnv.USE_SSL;
+if (useSSL) {
+  pgp.pg.defaults.ssl = true;
+}
+// setup connectionString
 const connectionString = process.env.DATABASE_URL || devEnv.DATABASE_URL;
-const db = pqp(connectionString);
+// init db
+const db = pgp(connectionString);
 
 // init routes
 const eckdaten = require("./api/v1/eckdaten/index")(express, db);
