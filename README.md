@@ -9,81 +9,81 @@ Quelle: [http://www.deutsches-sportabzeichen.de/](http://www.deutsches-sportabze
 - api/v1/eckdaten/exercises
   - Abruf aller verfügbaren Übungen
   - Rückgabedaten
-    ```json
-    {
-      "status": "success",
-      "message": "all data receivced!",
-      "data": [
-        {
-          "uebung": "Gerätturnen",
-          "zusatz": "Schwebebalken"
-        }
-      ]
-    }
-    ```
+  ```json
+  {
+    "status": "success",
+    "message": "all data receivced!",
+    "data": [
+      {
+        "uebung": "Gerätturnen",
+        "zusatz": "Schwebebalken"
+      }
+    ]
+  }
+  ```
 
 - api/v1/eckdaten/exercises/:category
   - Abruf aller verfügbaren Übungen für eine bestimmte Kategorie
   - category = ausdauer, kraft, schnelligkeit, koordination
   - Rückgabedaten
-    ```json
-    {
-      "status": "success",
-      "message": "all data receivced!",
-      "data": [
-        {
-          "uebung": "Gerätturnen",
-          "zusatz": "Schwebebalken"
-        }
-      ]
-    }
-    ```
+  ```json
+  {
+    "status": "success",
+    "message": "all data receivced!",
+    "data": [
+      {
+        "uebung": "Gerätturnen",
+        "zusatz": "Schwebebalken"
+      }
+    ]
+  }
+  ```
 
 - api/v1/eckdaten/categories
   - Abruf aller verfügbaren Kategorie
   - Rückgabedaten
-    ```json
-    {
-      "status": "success",
-      "message": "all data receivced!",
-      "data": [
-        {
-          "kategorie": "ausdauer"
-        }
-      ]
-    }
-    ```
+  ```json
+  {
+    "status": "success",
+    "message": "all data receivced!",
+    "data": [
+      {
+        "kategorie": "ausdauer"
+      }
+    ]
+  }
+  ```
 
 - api/v1/eckdaten/genders
   - Abruf aller verfügbaren Geschlechter
   - Rückgabedaten
-    ```json
-    {
-      "status": "success",
-      "message": "all data receivced!",
-      "data": [
-        {
-          "geschlecht": "f"
-        }
-      ]
-    }
-    ```
+  ```json
+  {
+    "status": "success",
+    "message": "all data receivced!",
+    "data": [
+      {
+        "geschlecht": "f"
+      }
+    ]
+  }
+  ```
 
 - api/v1/eckdaten/ages
   - Abruf aller verfügbaren Alter
   - Rückgabedaten
-    ```json
-    {
-      "status": "success",
-      "message": "all data receivced!",
-      "data": [
-        {
-          "alt_von": 18,
-          "alt_bis": 19
-        }
-      ]
-    }
-    ```
+  ```json
+  {
+    "status": "success",
+    "message": "all data receivced!",
+    "data": [
+      {
+        "alt_von": 18,
+        "alt_bis": 19
+      }
+    ]
+  }
+  ```
 
 ### Leistungsdaten
 
