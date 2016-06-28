@@ -9,6 +9,14 @@
     "start": "node app/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flashback2k14/socobo-project-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flashback2k14/unoffical-sportabzeichen-api/issues"
+  },
+  "homepage": "https://github.com/flashback2k14/unoffical-sportabzeichen-api#readme",
   "dependencies": {
     "express": "^4.14.0",
     "body-parser": "^1.15.2",
