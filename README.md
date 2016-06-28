@@ -1,4 +1,4 @@
-# Unoffical Sportabzeichen API
+# Unofficial Sportabzeichen API
 
 Quelle: [http://www.deutsches-sportabzeichen.de/](http://www.deutsches-sportabzeichen.de/)
 
