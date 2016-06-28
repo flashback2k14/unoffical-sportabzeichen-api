@@ -1,6 +1,6 @@
 {
   "name": "unoffical-sportabzeichen-api",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "unoffical sportabzeichen api",
   "main": "app/index.js",
   "author": "flashback2k14",

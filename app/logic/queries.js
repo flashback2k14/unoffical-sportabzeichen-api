@@ -1,68 +1,72 @@
-module.exports = (db, tableName) => {
-
-  function getAll(req, res, next) {
-    db.any(`select * from ${tableName}`)
+module.exports = (db) => {
+  /**
+   * 
+   */
+  function getAll (req, res, next) {
+    // get parameter from url
+    let category = req.params.category;
+    // get data from database
+    db.any("select * from leistungstabelle where kategorie = $1", category)
       .then((data) => {
+        // return data
         res.status(200)
           .json({
             status: "success",
             message: "all data receivced!",
-            methodCall: "getAll",
             data: data
           });
       })
       .catch((err) => {
+        // return error
         return next(err);
       });
   }
 
-  function getAllFromGender(req, res, next) {
+  /**
+   * 
+   */
+  function getAllFromGender (req, res, next) {
+    // get parameter from url
+    let category = req.params.category;
     let gender = req.params.gender;
-    db.any(`select * from ${tableName} where geschlecht = $1`, gender)
+    // get data from database
+    db.any("select * from leistungstabelle where kategorie = $1 and geschlecht = $2", [category, gender])
       .then((data) => {
+        // return data
         res.status(200)
           .json({
             status: "success",
             message: "all data receivced!",
-            methodCall: "getAllFromGender",
             data: data
           });
       })
       .catch((err) => {
+        // return error
         return next(err);
       });
   }
 
-  function getAllFromGenderAndAge(req, res, next) {
+  /**
+   * 
+   */
+  function getAllFromGenderAndAge (req, res, next) {
+    // get parameter from url
+    let category = req.params.category;
     let gender = req.params.gender;
     let age = req.params.age;
-    db.any(`select * from ${tableName} where geschlecht = $1 and alt_von <= $2 and alt_bis >= $2`, [gender, age])
+    // get data from database
+    db.any("select * from leistungstabelle where kategorie = $1 and geschlecht = $2 and alt_von <= $3 and alt_bis >= $3", [category, gender, age])
       .then((data) => {
+        // return data
         res.status(200)
           .json({
             status: "success",
             message: "all data receivced!",
-            methodCall: "getAllFromGenderAndAge",
             data: data
           });
       })
       .catch((err) => {
-        return next(err);
-      });
-  }
-
-  function getUebungen(req, res, next) {
-    db.any(`select distinct uebung from ${tableName}`)
-      .then((data) => {
-        res.status(200)
-          .json({
-            status: "success",
-            message: "all data receivced!",
-            methodCall: "getUebungen",
-            data: data
-          });
-      })
-      .catch((err) => {
+        // return error
         return next(err);
       });
   }
@@ -70,7 +74,6 @@ module.exports = (db, tableName) => {
   return {
     getAll: getAll,
     getAllFromGender: getAllFromGender,
-    getAllFromGenderAndAge: getAllFromGenderAndAge,
-    getUebungen: getUebungen
+    getAllFromGenderAndAge: getAllFromGenderAndAge
   }
 }
