@@ -30,5 +30,5 @@ app.use("/api/v1", api);
 
 // start server
 const server = http.createServer(app).listen(port, () => {
-  console.log("Backend is running on port: " + port);
+  console.log(`Backend is running on port: ${port}`);
 });
