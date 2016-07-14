@@ -1,3 +1,5 @@
+[![Dependency Status](https://dependencyci.com/github/flashback2k14/unofficial-sportabzeichen-api/badge)](https://dependencyci.com/github/flashback2k14/unofficial-sportabzeichen-api)
+
 # Unofficial Sportabzeichen API
 
 Abrufbar unter: [https://unofficial-sportabzeichen-api.herokuapp.com](https://unofficial-sportabzeichen-api.herokuapp.com)
@@ -8,7 +10,7 @@ Quelle: [http://www.deutsches-sportabzeichen.de/](http://www.deutsches-sportabze
 
 ### Eckdaten
 
-- api/v1/eckdaten/exercises
+- GET api/v1/eckdaten/exercises
   - Abruf aller verfügbaren Übungen
   - Rückgabedaten
   ```json
@@ -24,7 +26,7 @@ Quelle: [http://www.deutsches-sportabzeichen.de/](http://www.deutsches-sportabze
   }
   ```
 
-- api/v1/eckdaten/exercises/:category
+- GET api/v1/eckdaten/exercises/:category
   - Abruf aller verfügbaren Übungen für eine bestimmte Kategorie
   - category = ausdauer, kraft, schnelligkeit, koordination
   - Rückgabedaten
@@ -41,7 +43,7 @@ Quelle: [http://www.deutsches-sportabzeichen.de/](http://www.deutsches-sportabze
   }
   ```
 
-- api/v1/eckdaten/categories
+- GET api/v1/eckdaten/categories
   - Abruf aller verfügbaren Kategorie
   - Rückgabedaten
   ```json
@@ -56,7 +58,7 @@ Quelle: [http://www.deutsches-sportabzeichen.de/](http://www.deutsches-sportabze
   }
   ```
 
-- api/v1/eckdaten/genders
+- GET api/v1/eckdaten/genders
   - Abruf aller verfügbaren Geschlechter
   - Rückgabedaten
   ```json
@@ -71,7 +73,7 @@ Quelle: [http://www.deutsches-sportabzeichen.de/](http://www.deutsches-sportabze
   }
   ```
 
-- api/v1/eckdaten/ages
+- GET api/v1/eckdaten/ages
   - Abruf aller verfügbaren Alter
   - Rückgabedaten
   ```json
@@ -89,7 +91,7 @@ Quelle: [http://www.deutsches-sportabzeichen.de/](http://www.deutsches-sportabze
 
 ### Leistungsdaten
 
-- api/v1/:category 
+- GET api/v1/:category 
   - Abruf aller Daten für Männer und Frauen
   - category = ausdauer, kraft, schnelligkeit, koordination
   - Rückgabedaten
@@ -116,7 +118,7 @@ Quelle: [http://www.deutsches-sportabzeichen.de/](http://www.deutsches-sportabze
   }
   ```
 
-- api/v1/:category/:gender 
+- GET api/v1/:category/:gender 
   - Abruf aller Daten für Männer oder Frauen
   - gender = m oder f
   - Rückgabedaten
@@ -143,7 +145,7 @@ Quelle: [http://www.deutsches-sportabzeichen.de/](http://www.deutsches-sportabze
   }
   ```
   
-- api/v1/:category/:gender/:age
+- GET api/v1/:category/:gender/:age
   - Abruf aller Daten für Männer oder Frauen für bestimmtes Alter
   - gender = m oder f
   - age = 18 bis 99
